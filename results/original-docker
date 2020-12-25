@@ -1,0 +1,36 @@
+INFO[0048] CustomBench threads complete in 15.363319486s time elapsed 
+INFO[0048] Docker: Stopping any running containers created during bucketbench runs 
+INFO[0048] Docker: Removing exited containers from bucketbench runs 
+INFO[0048] Overhead:DockerCLI: threads 3, iterations 15, rate:   2.93 
+
+SUMMARY TIMINGS/THREAD RATES
+
+                      Iter/Thd    1 thrd   2 thrds   3 thrds   4 thrds   5 thrds   6 thrds   7 thrds   8 thrds   9 thrds  10 thrds 
+               Limit      1000   1412.21   3082.70   4807.57   5682.47   6390.65   7177.36   7753.77   8249.65   7910.30   7116.07 
+  Overhead:DockerCLI        15      1.56      2.53      2.93 
+
+DETAILED COMMAND TIMINGS/STATISTICS
+
+  Overhead:DockerCLI:1       Min       Max       Avg    Median    Stddev    Errors
+                   run    335.00    407.00    370.13    372.00     21.73         0
+                  stop    196.00    266.00    224.53    221.00     17.34         0
+                delete     33.00     61.00     38.53     37.00      6.70         0
+  Overhead:DockerCLI:2       Min       Max       Avg    Median    Stddev    Errors
+                   run    305.00    586.00    480.87    477.00     58.85         0
+                  stop    197.00    375.00    251.70    248.50     42.45         0
+                delete     33.00     44.00     37.00     36.00      3.00         0
+  Overhead:DockerCLI:3       Min       Max       Avg    Median    Stddev    Errors
+                   run    314.00    789.00    630.69    631.00     89.59         0
+                  stop    224.00    469.00    330.07    327.00     55.40         0
+                delete     33.00     43.00     36.56     36.00      2.46         0
+
+OVERHEAD
+
+docker driver (binary: /usr/bin/docker)
+[CLIENT:19.03.6|API:1.40][SERVER:0.18.0|Storage:overlay2|BackingFS:extfs|Kernel:5.9.0-050900-generic]
+
+  Bench / driver / threads       Min       Max       Avg       Min       Max       Avg     Mem %     CPU x
+      Overhead:DockerCLI:1     98 MB     98 MB     98 MB    0.00 %   14.04 %    7.60 %
+      Overhead:DockerCLI:2     98 MB     98 MB     98 MB    0.00 %   23.95 %   12.52 %
+      Overhead:DockerCLI:3     98 MB     98 MB     98 MB    0.00 %   18.13 %   13.99 %
+
